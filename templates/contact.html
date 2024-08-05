@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact Us {% endblock title %}
+
+
+{% block body %} 
+<section class="section-bg" style="background-image: ;" data-scroll-index="7">
+    <div class="overlay pt-100 pb-100 ">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-flex align-items-center">
+            <div class="contact-info">
+                <h1 style="position: relative;bottom: 160px;"> <u style="color:#FE846F">  Contact Us</u></h1>
+              <h2 class="contact-title" style="position: relative;bottom: 160px;" >Have Any Questions?</h2>
+              <p style="font-size:30px;position: relative;bottom: 160px;">feel free to contact on following contact information</p>
+              <ul class="contact-info">
+                <li>
+                  <div class="info-left">
+                    <i class="fa fa-phone" style="font-size:36px;position: relative;bottom: 160px;"></i>
+                  </div>
+                  <div class="info-right">
+                    <h4 style="position: relative;bottom: 160px;">+91-7004348893</h4>
+                   
+                  </div>
+                </li>
+                <li>
+                  <div class="info-left">
+                    <i class="fa fa-at" style="font-size:36px;position: relative;bottom: 160px;"></i>
+                  </div>
+                  <div class="info-right">
+                    <h4 style="position: relative;bottom: 160px;"> <a href="abhinandan727764@gmail.com" style="color:#FE846F">abhinandanlkr@gmail.com</a></h4>
+                  </div>
+                </li>
+                <li>
+                  <div class="info-left">
+                    <i class="fa fa-map-marker" style="font-size:36px;position: relative;bottom: 160px;"></i>
+                  </div>
+                  <div class="info-right">
+                    <h4 style="position: relative;bottom: 160px;">Kapil deo bhawan, Karyanand nagar,<br> near bijli office, Lakhisarai 811311</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center">
+            <div class="contact-form" style="position: relative;bottom: 70px;">
+              <!--Contact Form-->
+              <form id='contact-form' method='POST'><input type='hidden' name='form-name' value='contactForm' />
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" name="name" class="form-control" id="first-name" placeholder="Enter Your Name *" required="required">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your email *" required="required">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="phone" name="phone" class="form-control" id="phone" placeholder="Enter Your mobile number *"required="required" >
+                    </div>
+                  </div>
+  
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea rows="4" name="desc" class="form-control" id="desc" placeholder="Enter Your Message *" required="required"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <!--contact button-->
+                    <button class="btn-big btn btn-bg">
+                      Send Us <i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Property Selling. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">
+                <img src="/static/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="/static/twitter.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="/static/social.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="/static/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+        </div>
+    </div>
+</footer>
+  
+{% endblock body %}
+
