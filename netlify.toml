@@ -1,3 +1,0 @@
-[build]
-command = "python manage.py collectstatic --noinput && python manage.py distill --output=public" # Or your static site generation command
-publish = "public" # Or whatever directory your static files are generated into
